@@ -1,15 +1,15 @@
 import express from 'express';
-import orders from '../controllers/orders';
+import orders from '../controllers/orderscontroller.js';
 
 const router = express.Router();
 
 router.router('/')
-      .get(admi.getorders)
-      .post(admi.createorder);
+      .get(orders.getorders)
+      .post(orders.createorder);
 
 router.router('/:id')
-      .put(admi.updateorder)
-      .delete(admi.deleteorder);
+      .put(orders.updateorder)
+      .delete(orders.deleteorder);
 
 export default router;
     

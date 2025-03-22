@@ -1,11 +1,11 @@
 const customerns ={}
-import customerns from "../models/customerns"
+import customernsModel from "../models/customerns.js"
 
 //get
 
 customerns.getCustomerns = async (req, res) => {
     try {
-        const customerns = await customerns.find()
+        const customerns = await customernsModel.find()
         res.json(customerns)
     } catch (error) {
         res.status(500).json({ message: error.message })
@@ -15,7 +15,7 @@ customerns.getCustomerns = async (req, res) => {
 // POST
 
 customerns.createCustomern = async (req, res) => {
-    const newCustomern = new customerns({
+    const newCustomern = new customernsModel({
         name: req.body.name,
         email: req.body.email,
         phone: req.body.phone,

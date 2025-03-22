@@ -1,5 +1,5 @@
 import express from 'express';
-import admi from "../controllers/admi.js";
+import admi from "../controllers/admicontroller.js";
 
 const router = express.Router();
 

@@ -1,11 +1,11 @@
 const fragrance ={}
-import fragrances from "../models/fragrances"
+import fragrancesmodel from "../models/fragrances.js"
 
 //GET
 
 fragrance.getFragrances = async (req, res) => {
     try {
-        const fragrances = await fragrances.find()
+        const fragrances = await fragrancesmodel.find()
         res.json(fragrances)
     } catch (error) {
         res.status(500).json({ message: error.message })
@@ -15,7 +15,7 @@ fragrance.getFragrances = async (req, res) => {
 // POST
 
 fragrance.createFragrance = async (req, res) => {
-    const newFragrance = new fragrances({
+    const newFragrance = new fragrancesmodel({
         name: req.body.name,
         description: req.body.description,
         price: req.body.price
@@ -37,7 +37,7 @@ fragrance.updateFragrance = async (req, res) => {
 
     if (!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send("No fragment found with that ID")
 
-    const updatedFragrance = await fragrances.findByIdAndUpdate(_id, fragrance, { new: true })
+    const updatedFragrance = await fragrancesmodel.findByIdAndUpdate(_id, fragrance, { new: true })
 
     if (!updatedFragrance) return res.status(404).send("No fragment found with that ID")
 
@@ -51,11 +51,11 @@ fragrance.deleteFragrance = async (req, res) => {
 
     if (!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send("No fragrance found with that ID")
 
-    const deletedFragrance = await fragrances.findByIdAndRemove(_id)
+    const deletedFragrance = await fragrancesmodel.findByIdAndRemove(_id)
 
     if (!deletedFragrance) return res.status(404).send("No fragrance found with that ID")
 
     res.json(deletedFragrance)
 }
 
-export default fragrance
+export default fragrance;

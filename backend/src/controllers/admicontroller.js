@@ -1,11 +1,11 @@
 const admi ={}
-import admi from "../controllers/admi"
+import admiModels from "../controllers/admi.js"
 
 //get
 
 admi.getAdmi = async (req, res) => {
     try {
-        const admi = await admi.find()
+        const admi = await admiModels.find()
         res.json(admi)
     } catch (error) {
         res.status(500).json({ message: error.message })
@@ -15,10 +15,10 @@ admi.getAdmi = async (req, res) => {
 // POST
 
 admi.createAdmi = async (req, res) => {
-    const admi = new admi(req.body)
+    const admi = new admiModels(req.body)
 
     try {
-        await admi.save()
+        await admiModels.save()
         res.status(201).json(admi)
     } catch (error) {
         res.status(400).json({ message: error.message })
@@ -29,7 +29,7 @@ admi.createAdmi = async (req, res) => {
 
 admi.deleteAdmi = async (req, res) => {
     try {
-        const admi = await admi.findByIdAndDelete(req.params.id)
+        const admi = await admiModels.findByIdAndDelete(req.params.id)
 
         if (!admi) return res.status(404).json({ message: "Admi not found" })
 
@@ -42,7 +42,7 @@ admi.deleteAdmi = async (req, res) => {
 // PUT
 
 admi.updateAdmi = async (req, res) => {
-    const admi = await admi.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    const admi = await admiModels.findByIdAndUpdate(req.params.id, req.body, { new: true })
 
     if (!admi) return res.status(404).json({ message: "Admi not found" })
 

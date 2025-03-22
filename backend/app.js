@@ -1,7 +1,7 @@
 // Importo todo lo de la libreria de Express
 import express from "express";
 import clothes from "./src/routes/clothes.js";
-import fragrance from "./src/routes/fragrancescontroller.js";
+import fragrance from "./src/routes/fragrances.js";
 import category from "./src/routes/category.js";
 import admi from  "./src/routes/admi.js";
 import customern from "./src/routes/customerns.js";

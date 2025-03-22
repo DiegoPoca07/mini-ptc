@@ -1,11 +1,11 @@
 const Category ={}
-import Category from "../controllers/category"
+import CategoryModels from "../models/category.js"
 
 //get
 
 Category.getCategory = async (req, res) => {
     try {
-        const category = await Category.find()
+        const category = await CategoryModels.find()
         res.json(category)
     } catch (error) {
         res.status(500).json({ message: error.message })
@@ -15,7 +15,7 @@ Category.getCategory = async (req, res) => {
 // POST
 
 Category.createCategory = async (req, res) => {
-    const newCategory = new Category({
+    const newCategory = new CategoryModels({
         nombre: req.body.nombre,
     })
 
@@ -31,7 +31,7 @@ Category.createCategory = async (req, res) => {
 
 Category.deleteCategory = async (req, res) => {
     try {
-        const deletedCategory = await Category.findByIdAndDelete(req.params.id)
+        const deletedCategory = await CategoryModels.findByIdAndDelete(req.params.id)
 
         if (!deletedCategory) return res.status(404).json({ message: "Category not found" })
 
@@ -45,7 +45,7 @@ Category.deleteCategory = async (req, res) => {
 
 Category.updateCategory = async (req, res) => {
     try {
-        const updatedCategory = await Category.findByIdAndUpdate(req.params.id, req.body, { new: true })
+        const updatedCategory = await CategoryModels.findByIdAndUpdate(req.params.id, req.body, { new: true })
 
         if (!updatedCategory) return res.status(404).json({ message: "Category not found" })
 

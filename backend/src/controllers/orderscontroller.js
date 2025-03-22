@@ -1,11 +1,11 @@
 const orders ={}
-import orders  from "../models/orders"
+import ordersmodel  from "../models/orders.js"
 
 //get
 
 orders.getOrders = async (req, res) => {
     try {
-        const orders = await orders.find()
+        const orders = await ordersmodel.find()
         res.json(orders)
     } catch (error) {
         res.status(500).json({ message: error.message })
