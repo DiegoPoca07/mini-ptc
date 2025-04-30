@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Barra promocional */
+.promo-bar {
+  background-color: #9a7b6a;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.promo-content {
+  text-align: center;
+  font-size: 14px;
+}
+
+.sign-up-link {
+  color: white;
+  text-decoration: underline;
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+.close-promo {
+  position: absolute;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Barra de navegación principal */
+.navbar-container {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.navbar-brand h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+  font-style: italic;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style-type: none;
+  margin-left: 30px;
+}
+
+.navbar-item {
+  margin: 0 15px;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-arrow {
+  font-size: 8px;
+  margin-left: 3px;
+}
+
+/* Barra de búsqueda */
+.navbar-search {
+  margin-left: auto;
+  flex-grow: 1;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 8px 15px;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+/* Iconos de la derecha */
+.navbar-icons {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.navbar-icon {
+  margin-left: 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Línea divisoria */
+.navbar-divider {
+  height: 1px;
+  background-color: #eaeaea;
+  width: 100%;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+  
+  .navbar-brand {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .navbar-menu {
+    margin-left: 0;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+  .navbar-search {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+  
+  .navbar-icons {
+    margin-left: 0;
+  }
+}

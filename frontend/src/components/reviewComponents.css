@@ -1,0 +1,153 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap');
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 200px;
+    max-height: 250px;
+    min-width: 610px;
+    max-width: 610px;
+    overflow: hidden;
+}
+
+.review-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.stars-container {
+    display: flex;
+    gap: 4px;
+}
+
+.star-filled {
+    color: #FFD700;
+    font-size: 18px;
+    filter: drop-shadow(0 0 1px rgba(255, 215, 0, 0.3));
+}
+
+.star-empty {
+    color: #e0e0e0;
+    font-size: 18px;
+}
+
+.menu-container {
+    position: relative;
+}
+
+.menu-icon {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+    color: #000;
+}
+
+.menu-icon:hover {
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    color: #333;
+    font-family: "satoshi";
+    font-size: 14px;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f8f8f8;
+    color: #000;
+}
+
+.reviewer {
+    font-family: "satoshi";
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.verified-icon {
+    color: #00c853;  /* Color verde */
+    font-size: 1rem;
+}
+
+.review-message {
+    font-family: "satoshi";
+    font-size: 1rem;
+    color: #4a4a4a;
+    line-height: 1.5;
+    max-height: 4.5em;     /* Aproximadamente 3 líneas de texto */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin: 0.5rem 0;
+    text-wrap: normal;
+}
+
+.review-date {
+    font-family: "satoshi";
+    font-size: 0.875rem;
+    color: #888;
+    font-weight: 500;
+    margin-top: auto;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .review-container {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+    
+    .reviewer {
+        font-size: 1.1rem;
+    }
+    
+    .review-message {
+        font-size: 0.95rem;
+    }
+}

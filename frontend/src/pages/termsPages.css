@@ -1,0 +1,127 @@
+.terms-page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+    color: #333;
+  }
+  
+  .terms-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #6b8e23;
+    margin-bottom: 40px;
+  }
+  
+  .terms-content {
+    line-height: 1.6;
+  }
+  
+  .terms-section {
+    margin-bottom: 30px;
+  }
+  
+  .terms-section h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .terms-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0 10px;
+    color: #666;
+  }
+  
+  .terms-section p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .terms-page-container {
+      padding: 30px 15px 50px;
+    }
+    
+    .terms-title {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+    
+    .terms-section h2 {
+      font-size: 20px;
+    }
+    
+    .terms-section h3 {
+      font-size: 16px;
+    }
+    
+    .terms-section p {
+      font-size: 14px;
+    }
+  }.terms-page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+    color: #333;
+  }
+  
+  .terms-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #6b8e23;
+    margin-bottom: 40px;
+  }
+  
+  .terms-content {
+    line-height: 1.6;
+  }
+  
+  .terms-section {
+    margin-bottom: 30px;
+  }
+  
+  .terms-section h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .terms-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0 10px;
+    color: #666;
+  }
+  
+  .terms-section p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .terms-page-container {
+      padding: 30px 15px 50px;
+    }
+    
+    .terms-title {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+    
+    .terms-section h2 {
+      font-size: 20px;
+    }
+    
+    .terms-section h3 {
+      font-size: 16px;
+    }
+    
+    .terms-section p {
+      font-size: 14px;
+    }
+  }
