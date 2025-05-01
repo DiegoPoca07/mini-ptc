@@ -1,0 +1,174 @@
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #fcf9f2;
+  }
+  
+  .auth-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .auth-logo {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .brand-name {
+    font-size: 28px;
+    font-weight: 500;
+    color: #6b8e23;
+    margin-top: 10px;
+  }
+  
+  .auth-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .auth-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .auth-form {
+    margin-bottom: 25px;
+  }
+  
+  .form-group {
+    margin-bottom: 16px;
+  }
+  
+  .auth-input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .auth-input:focus {
+    border-color: #6b8e23;
+  }
+  
+  .auth-button {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #9a7b6a;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .auth-button:hover {
+    background-color: #856659;
+  }
+  
+  .auth-divider {
+    position: relative;
+    margin: 25px 0;
+    text-align: center;
+  }
+  
+  .auth-divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #ddd;
+    z-index: 1;
+  }
+  
+  .divider-text {
+    position: relative;
+    background-color: #fcf9f2;
+    padding: 0 10px;
+    color: #999;
+    font-size: 14px;
+    z-index: 2;
+  }
+  
+  .google-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 15px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .google-button:hover {
+    background-color: #e8e8e8;
+  }
+  
+  .google-icon {
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .terms-text {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .terms-link {
+    color: #6b8e23;
+    text-decoration: none;
+  }
+  
+  .terms-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos específicos para campo de contraseña */
+  .auth-input[type="password"] {
+    letter-spacing: 0.1em;
+  }
+  
+  /* Ajustes responsive */
+  @media (max-width: 480px) {
+    .auth-container {
+      padding: 15px;
+    }
+    
+    .auth-title {
+      font-size: 22px;
+    }
+    
+    .auth-subtitle {
+      font-size: 14px;
+    }
+    
+    .auth-input,
+    .auth-button,
+    .google-button {
+      padding: 10px 12px;
+      font-size: 15px;
+    }
+  }

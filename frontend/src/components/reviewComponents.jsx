@@ -49,7 +49,7 @@ function Review({ rating = 5 }) {
                 <FaCheckCircle className="verified-icon" />
             </h1>
             <p className="review-message">
-                {truncateText("El producto esta muy bueno igual que el dueño de la pagina 10 de 10. El producto esta muy bueno igual que el dueño de la pagina 10 de 10. El producto esta muy bueno igual que el dueño de la pagina 10 de 10.")}
+                {truncateText("El producto esta muy bueno igual que el dueño de la pagina y programador 🥵🥵🥵🥵 10 de 10 que buen servicio.")}
             </p>
             <h3 className="review-date">publicado el 24 de julio de 2025</h3>
         </div>

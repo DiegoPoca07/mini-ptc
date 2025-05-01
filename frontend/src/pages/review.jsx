@@ -30,6 +30,7 @@ function ReviewPage() {
                     <Review rating={3} />
                     <Review rating={2} />
                     <Review rating={1} />
+                    <Review rating={1} />
                 </div>
                 
                 <button className="review-page__load-more">
