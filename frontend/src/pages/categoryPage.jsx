@@ -1,16 +1,20 @@
 import { useState } from 'react';
+// Importación de iconos de Lucide React para la interfaz
 import { ChevronDown, ChevronUp, ChevronRight, X, Star, Filter } from 'lucide-react';
 import './categoryPage.css';
 
 export default function CategoryPage() {
+  // Estado para controlar qué filtros están expandidos
   const [expandedFilters, setExpandedFilters] = useState({
     colors: true,
     size: true,
     dressStyle: true,
   });
 
+  // Estado para el rango de precios seleccionado
   const [priceRange, setPriceRange] = useState([50, 300]);
 
+  // Función para alternar la expansión/contracción de las secciones de filtros
   const toggleFilter = (filter) => {
     setExpandedFilters(prev => ({
       ...prev,
@@ -18,6 +22,7 @@ export default function CategoryPage() {
     }));
   };
 
+  // Datos mock para los productos
   const clothingItems = [
     {
       id: 1,
@@ -129,6 +134,7 @@ export default function CategoryPage() {
     }
   ];
 
+  // Datos mock para las categorías de ropa
   const categories = [
     { name: "T-shirts", count: 7 },
     { name: "Shirts", count: 5 },
@@ -137,6 +143,7 @@ export default function CategoryPage() {
     { name: "Jeans", count: 6 }
   ];
 
+  // Configuración de colores disponibles para filtrar
   const colors = [
     { color: "green", name: "green" },
     { color: "red", name: "red" },
@@ -148,10 +155,12 @@ export default function CategoryPage() {
     { color: "black", name: "black" }
   ];
 
+  // Tallas disponibles para filtrar
   const sizes = [
     "XX-Small", "X-Small", "Small", "Medium", "Large", "X-Large", "XX-Large", "3X-Large"
   ];
 
+  // Estilos de vestir disponibles para filtrar
   const dressStyles = [
     { name: "Casual", count: 12 },
     { name: "Formal", count: 8 },
@@ -161,6 +170,7 @@ export default function CategoryPage() {
 
   return (
     <div className="store-page-container">
+      {/* Navegación de migas de pan */}
       <div className="breadcrumb-container">
         <nav className="breadcrumb-nav">
           <ol className="breadcrumb-list">
@@ -178,12 +188,15 @@ export default function CategoryPage() {
       </div>
 
       <div className="main-content">
+        {/* Barra lateral de filtros */}
         <aside className="sidebar">
+          {/* Encabezado de la sección de filtros */}
           <div className="sidebar-header">
             <h2 className="sidebar-title">Filters</h2>
             <Filter size={18} className="filter-icon" />
           </div>
 
+          {/* Sección de filtro por categorías */}
           <div className="filter-section">
             <ul className="category-list">
               {categories.map((category, idx) => (
@@ -195,6 +208,7 @@ export default function CategoryPage() {
             </ul>
           </div>
 
+          {/* Sección de filtro por rango de precios */}
           <div className="filter-section">
             <h3 className="filter-title">Price</h3>
             <div className="price-slider-container">
@@ -206,6 +220,7 @@ export default function CategoryPage() {
             </div>
           </div>
 
+          {/* Sección de filtro por colores */}
           <div className="filter-section">
             <div className="filter-header" onClick={() => toggleFilter('colors')}>
               <h3 className="filter-title">Colors</h3>
@@ -223,6 +238,7 @@ export default function CategoryPage() {
             )}
           </div>
 
+          {/* Sección de filtro por tallas */}
           <div className="filter-section">
             <div className="filter-header" onClick={() => toggleFilter('size')}>
               <h3 className="filter-title">Size</h3>
@@ -240,6 +256,7 @@ export default function CategoryPage() {
             )}
           </div>
 
+          {/* Sección de filtro por estilo de vestir */}
           <div className="filter-section">
             <div className="filter-header" onClick={() => toggleFilter('dressStyle')}>
               <h3 className="filter-title">Dress Style</h3>
@@ -258,10 +275,13 @@ export default function CategoryPage() {
             )}
           </div>
 
+          {/* Botón para aplicar los filtros seleccionados */}
           <button className="apply-filter-btn">Apply Filter</button>
         </aside>
 
+        {/* Área principal de productos */}
         <div className="product-area">
+          {/* Encabezado con título y opciones de ordenamiento */}
           <div className="product-header">
             <h1 className="product-title">Casual</h1>
             <div className="product-sorting">
@@ -276,12 +296,16 @@ export default function CategoryPage() {
             </div>
           </div>
 
+          {/* Cuadrícula de productos */}
           <div className="product-grid">
+            {/* Mapeo de productos para mostrarlos en tarjetas */}
             {clothingItems.map((item) => (
               <div key={item.id} className="product-card">
+                {/* Contenedor de imagen del producto */}
                 <div className="product-image-container">
                   <img src={item.image} alt={item.name} className="product-image" />
                 </div>
+                {/* Detalles del producto (nombre, valoración, precio) */}
                 <div className="product-details">
                   <h3 className="product-name">{item.name}</h3>
                   <div className="product-rating">
@@ -310,6 +334,7 @@ export default function CategoryPage() {
             ))}
           </div>
 
+          {/* Controles de paginación */}
           <div className="pagination">
             <button className="pagination-prev">
               <ChevronLeft size={16} className="pagination-icon" />
@@ -333,6 +358,7 @@ export default function CategoryPage() {
   );
 }
 
+// Componente personalizado para el icono de chevron izquierdo
 const ChevronLeft = ({ size, className }) => {
   return (
     <svg 

@@ -1,8 +1,14 @@
 import React from 'react';
 import './newsPages.css';
 
+/**
+ * Componente NewsPage
+ * Renderiza una página de noticias con artículos, categorías y archivo
+ * Incluye una barra lateral con filtros y enlaces sociales
+ */
 const NewsPage = () => {
-  // Datos de ejemplo para artículos de noticias
+  // Array de artículos de noticias (datos de ejemplo)
+  // Cada artículo contiene: id, título, resumen, fecha, imagen y categoría
   const newsArticles = [
     {
       id: 1,
@@ -55,18 +61,25 @@ const NewsPage = () => {
   ];
 
   return (
+    // Contenedor principal de la página de noticias
     <div className="news-page-container">
+      {/* Encabezado con el título principal */}
       <div className="news-header">
         <h1 className="news-title">The latest in news and updates</h1>
       </div>
 
+      {/* Contenedor del contenido principal y la barra lateral */}
       <div className="news-content">
+        {/* Sección principal con los artículos y paginación */}
         <div className="news-main">
           <h2 className="section-title">News</h2>
           
+          {/* Grid de artículos de noticias */}
           <div className="news-articles">
+            {/* Mapeo del array de artículos para crear las tarjetas */}
             {newsArticles.map(article => (
               <article key={article.id} className="news-article">
+                {/* Contenido del artículo: meta información, título y resumen */}
                 <div className="article-content">
                   <div className="article-meta">
                     <span className="article-category">{article.category}</span>
@@ -76,6 +89,7 @@ const NewsPage = () => {
                   <p className="article-summary">{article.summary}</p>
                   <a href={`/news/${article.id}`} className="read-more-link">Read more</a>
                 </div>
+                {/* Renderizado condicional de la imagen del artículo */}
                 {article.image && (
                   <div className="article-image">
                     <img src={article.image} alt={article.title} />
@@ -85,6 +99,7 @@ const NewsPage = () => {
             ))}
           </div>
           
+          {/* Controles de paginación */}
           <div className="pagination">
             <button className="pagination-btn active">1</button>
             <button className="pagination-btn">2</button>
@@ -95,7 +110,9 @@ const NewsPage = () => {
           </div>
         </div>
         
+        {/* Barra lateral con filtros y enlaces adicionales */}
         <aside className="news-sidebar">
+          {/* Sección de categorías para filtrar noticias */}
           <div className="sidebar-section">
             <h3 className="sidebar-title">Categories</h3>
             <ul className="category-list">
@@ -109,6 +126,7 @@ const NewsPage = () => {
             </ul>
           </div>
           
+          {/* Sección de archivo por meses */}
           <div className="sidebar-section">
             <h3 className="sidebar-title">Archives</h3>
             <ul className="archive-list">
@@ -121,6 +139,7 @@ const NewsPage = () => {
             </ul>
           </div>
           
+          {/* Sección de enlaces a redes sociales */}
           <div className="sidebar-section">
             <h3 className="sidebar-title">Follow Us</h3>
             <div className="social-links">
