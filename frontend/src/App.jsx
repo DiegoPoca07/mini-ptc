@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from './components/footer';
 import Review from './pages/review';
 import Navbar from './components/navbar';
-//import './App.css';
+import './App.css';
 import TermsPage from './pages/termsPages';
 import AboutPage from './pages/aboutPage';
 import HomePage from './pages/homePage';
@@ -39,7 +39,7 @@ function App() {
               </div>
             } />
             <Route path="/category" element={
-              <div className="store-page-container">
+              <div className="centered-page-container">
                 <CategoryPage />
               </div>
             } />

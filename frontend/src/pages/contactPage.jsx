@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './ContactPage.css';
+import faceboock from '../assets/faceboock-logo.svg';
+import instagram from '../assets/inta-logo.svg';
+import x from '../assets/x-logo.svg';
+import tiktok from '../assets/tiktok-logo.svg';
 
 // Componentes de iconos SVG personalizados para la interfaz
 // Icono de correo electrónico
@@ -104,16 +108,16 @@ const ContactPage = () => {
           <div className="social-links">
             {/* Links a redes sociales con iconos */}
             <a href="https://facebook.com/naturadeluxe" className="social-link" aria-label="Facebook">
-              <img src="/images/facebook-icon.svg" alt="Facebook" />
+              <img src={faceboock} alt="Facebook" />
             </a>
             <a href="https://instagram.com/naturadeluxe" className="social-link" aria-label="Instagram">
-              <img src="/images/instagram-icon.svg" alt="Instagram" />
+              <img src={instagram} alt="Instagram" />
             </a>
             <a href="https://twitter.com/naturadeluxe" className="social-link" aria-label="Twitter">
-              <img src="/images/twitter-icon.svg" alt="Twitter" />
+              <img src={x} alt="Twitter" />
             </a>
             <a href="https://tiktok.com/@naturadeluxe" className="social-link" aria-label="TikTok">
-              <img src="/images/tiktok-icon.svg" alt="TikTok" />
+              <img src={tiktok} alt="TikTok" />
             </a>
           </div>
         </div>

@@ -41,6 +41,19 @@
     flex: 1;
 }
 
+/* Contenedor centrado para páginas */
+.centered-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: calc(100vh - 64px); /* Ajusta según la altura del navbar */
+    background-color: #f9fafb;
+}
+
 @media (max-width: 768px) {
     .store-page-container {
         padding: 1rem;
@@ -53,6 +66,10 @@
     .store-page-container .sidebar {
         width: 100%;
         position: static;
+    }
+
+    .centered-page-container {
+        padding: 1rem;
     }
 }
 

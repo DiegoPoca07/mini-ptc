@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 import './Footer.css';
+import amex from '../assets/Amex-logo.svg';
+import visa from '../assets/visa-logo.svg';
+import mastercard from '../assets/mastercard-logo.svg';
+import paypal from '../assets/paypal-logo.svg';
+import applepay from '../assets/applepay-logo.svg';
+import googlepay from '../assets/googlepay-logo.svg';
 
 // Iconos de redes sociales
 const TwitterIcon = () => (
@@ -152,12 +158,12 @@ const Footer = () => {
             <p>NaturaDeluxe © 2000-2023, All Rights Reserved</p>
           </div>
           <div className="footer-payment-methods">
-            <img src="/images/payment/amex.png" alt="American Express" className="payment-icon" />
-            <img src="/images/payment/visa.png" alt="Visa" className="payment-icon" />
-            <img src="/images/payment/mastercard.png" alt="Mastercard" className="payment-icon" />
-            <img src="/images/payment/paypal.png" alt="PayPal" className="payment-icon" />
-            <img src="/images/payment/applepay.png" alt="Apple Pay" className="payment-icon" />
-            <img src="/images/payment/googlepay.png" alt="Google Pay" className="payment-icon" />
+            <img src={amex} alt="American Express" className="payment-icon" />
+            <img src={visa} alt="Visa" className="payment-icon" />
+            <img src={mastercard} alt="Mastercard" className="payment-icon" />
+            <img src={paypal} alt="PayPal" className="payment-icon" />
+            <img src={applepay} alt="Apple Pay" className="payment-icon" />
+            <img src={googlepay} alt="Google Pay" className="payment-icon" />
           </div>
         </div>
       </div>
