@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { ChevronRight, ShoppingBag, Minus, Plus, X, Tag } from 'lucide-react';
 import './ShoppingCartPage.css';
+// Importar las imágenes
+import camisaNaranja from '../assets/camisa-naranja.png';
+import camisaCuadriculada from '../assets/camisa-cuadriculada.png';
+import pantalonAzul from '../assets/pantalon-azul.png';
 
 export default function ShoppingCart() {
   const [cartItems, setCartItems] = useState([
@@ -11,7 +15,7 @@ export default function ShoppingCart() {
       color: "Multi",
       price: 145,
       quantity: 1,
-      image: "/api/placeholder/120/120",
+      image: camisaNaranja,
     },
     {
       id: 2,
@@ -20,7 +24,7 @@ export default function ShoppingCart() {
       color: "Red",
       price: 180,
       quantity: 1,
-      image: "/api/placeholder/120/120",
+      image: camisaCuadriculada,
     },
     {
       id: 3,
@@ -29,7 +33,7 @@ export default function ShoppingCart() {
       color: "Blue",
       price: 240,
       quantity: 1,
-      image: "/api/placeholder/120/120",
+      image: pantalonAzul,
     }
   ]);
 

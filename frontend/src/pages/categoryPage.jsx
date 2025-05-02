@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ChevronDown, ChevronUp, ChevronRight, X, Star, Filter } from 'lucide-react';
 import './categoryPage.css';
 
-export default function CasualClothingStore() {
+export default function CategoryPage() {
   const [expandedFilters, setExpandedFilters] = useState({
     colors: true,
     size: true,
@@ -160,8 +160,7 @@ export default function CasualClothingStore() {
   ];
 
   return (
-    <div className="store-container">
-      {/* Header with breadcrumbs */}
+    <div className="store-page-container">
       <div className="breadcrumb-container">
         <nav className="breadcrumb-nav">
           <ol className="breadcrumb-list">
@@ -178,16 +177,13 @@ export default function CasualClothingStore() {
         </nav>
       </div>
 
-      {/* Main content */}
       <div className="main-content">
-        {/* Sidebar filters */}
-        <div className="sidebar">
+        <aside className="sidebar">
           <div className="sidebar-header">
             <h2 className="sidebar-title">Filters</h2>
             <Filter size={18} className="filter-icon" />
           </div>
 
-          {/* Categories */}
           <div className="filter-section">
             <ul className="category-list">
               {categories.map((category, idx) => (
@@ -199,7 +195,6 @@ export default function CasualClothingStore() {
             </ul>
           </div>
 
-          {/* Price Range */}
           <div className="filter-section">
             <h3 className="filter-title">Price</h3>
             <div className="price-slider-container">
@@ -211,7 +206,6 @@ export default function CasualClothingStore() {
             </div>
           </div>
 
-          {/* Colors */}
           <div className="filter-section">
             <div className="filter-header" onClick={() => toggleFilter('colors')}>
               <h3 className="filter-title">Colors</h3>
@@ -229,7 +223,6 @@ export default function CasualClothingStore() {
             )}
           </div>
 
-          {/* Size */}
           <div className="filter-section">
             <div className="filter-header" onClick={() => toggleFilter('size')}>
               <h3 className="filter-title">Size</h3>
@@ -247,7 +240,6 @@ export default function CasualClothingStore() {
             )}
           </div>
 
-          {/* Dress Style */}
           <div className="filter-section">
             <div className="filter-header" onClick={() => toggleFilter('dressStyle')}>
               <h3 className="filter-title">Dress Style</h3>
@@ -267,9 +259,8 @@ export default function CasualClothingStore() {
           </div>
 
           <button className="apply-filter-btn">Apply Filter</button>
-        </div>
+        </aside>
 
-        {/* Product listing */}
         <div className="product-area">
           <div className="product-header">
             <h1 className="product-title">Casual</h1>
@@ -285,7 +276,6 @@ export default function CasualClothingStore() {
             </div>
           </div>
 
-          {/* Grid of products */}
           <div className="product-grid">
             {clothingItems.map((item) => (
               <div key={item.id} className="product-card">
@@ -320,7 +310,6 @@ export default function CasualClothingStore() {
             ))}
           </div>
 
-          {/* Pagination */}
           <div className="pagination">
             <button className="pagination-prev">
               <ChevronLeft size={16} className="pagination-icon" />
@@ -362,4 +351,3 @@ const ChevronLeft = ({ size, className }) => {
     </svg>
   );
 };
-

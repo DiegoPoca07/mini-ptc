@@ -1,5 +1,5 @@
 import React from 'react';
-import './NewsPage.css';
+import './newsPages.css';
 
 const NewsPage = () => {
   // Datos de ejemplo para artículos de noticias

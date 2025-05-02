@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 // Iconos importados de alguna librería como react-icons o definidos inline
@@ -43,7 +44,7 @@ const Navbar = () => {
       {showPromo && (
         <div className="promo-bar">
           <div className="promo-content">
-            Sign up and get 20% off to your first order. <a href="#signup" className="sign-up-link">Sign Up Now</a>
+            Sign up and get 20% off to your first order. <Link to="/signup" className="sign-up-link">Sign up</Link>
           </div>
           <button className="close-promo" onClick={closePromo}>
             <CloseIcon />
@@ -53,24 +54,29 @@ const Navbar = () => {
       
       <nav className="navbar">
         <div className="navbar-brand">
-          <h1>NaturaDeluxe</h1>
+          <Link to="/">
+            <h1>NaturaDeluxe</h1>
+          </Link>
         </div>
         
         <ul className="navbar-menu">
           <li className="navbar-item dropdown">
-            <a href="#shop">Shop <span className="dropdown-arrow">▼</span></a>
+            <Link to="/category">Category</Link>
           </li>
           <li className="navbar-item">
-            <a href="#sale">On Sale</a>
+            <Link to="/news">News</Link>
           </li>
           <li className="navbar-item">
-            <a href="#new">New Arrivals</a>
+            <Link to="/terms">Terms</Link>
           </li>
           <li className="navbar-item">
-            <a href="#reviews">Reviews</a>
+            <Link to="/contact">Contact</Link>
           </li>
           <li className="navbar-item">
-            <a href="#news">News</a>
+            <Link to="/review">Review</Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/about">About</Link>
           </li>
         </ul>
         
@@ -86,12 +92,12 @@ const Navbar = () => {
         </div>
         
         <div className="navbar-icons">
-          <a href="#cart" className="navbar-icon">
+          <Link to="/shopping-cart" className="cart-icon">
             <CartIcon />
-          </a>
-          <a href="#account" className="navbar-icon">
+          </Link>
+          <Link to="/login" className="navbar-icon">
             <UserIcon />
-          </a>
+          </Link>
         </div>
       </nav>
       
